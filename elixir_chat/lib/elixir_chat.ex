@@ -34,6 +34,7 @@ defmodule ElixirChat do
       display_message(list["user"], list["message"])
       listen_for_messages(channel, queue_name) 
     end
+  end
   #Method of encoding to JSON the name of the user with the message.After that  publishing this data in the channel.
   def publish_message(user, message, channel) do
     { :ok, data } = JSON.encode([user: user, message: message])
